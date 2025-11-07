@@ -108,8 +108,7 @@ def run_kruskal_for_graph(nodes, edges, layout_fn, layout_kwargs, tag):
 
 def main():
     # ---------- Graph 2 (6 noder, 9 kanter) ----------
-    # Ulik fra din graf: færre noder, andre kanter/vekter, spring-layout
-    nodes_g2 = range(1, 7)  # 1..6
+    nodes_g2 = range(1, 7)
     edges_g2 = [
         (1, 2, 4),
         (1, 3, 3),
@@ -130,8 +129,7 @@ def main():
     )
 
     # ---------- Graph 3 (8 noder, 13 kanter) ----------
-    # Ulik fra din graf: flere noder, tettere, shell-layout
-    nodes_g3 = range(1, 9)  # 1..8
+    nodes_g3 = range(1, 9)
     edges_g3 = [
         (1, 2, 10),
         (1, 3, 1),
@@ -151,9 +149,11 @@ def main():
         nodes_g3,
         edges_g3,
         layout_fn=nx.shell_layout,
-        layout_kwargs=None,   # shell_layout har ikke seed
+        layout_kwargs=None,
         tag="g3"
     )
 
+
 if __name__ == "__main__":
     main()
+
